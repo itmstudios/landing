@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+
+    <title>Home</title>
+</head>
+<body>
+<section class="main_index">
+    <header>
+        <nav>
+            <ul>
+                <li><p>Our portfolio</p></li>
+                <li><p>About us</p></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="./assets/Logo.png" alt="logo" class="logo">
+
+    <picture>
+        <source srcset="./assets/block1.png"
+                media="(min-width: 900px)">
+        <img src="./assets/block1_min.png" alt="block1" class="block1">
+    </picture>
+    <picture>
+        <source srcset="./assets/block2.png"
+                media="(min-width: 900px)">
+        <img src="./assets/block2_min.png" alt="block2" class="block2">
+    </picture>
+    <picture>
+        <source srcset="./assets/block3.png"
+                media="(min-width: 900px)">
+        <img src="./assets/block3_min.png" alt="block2" class="block3">
+    </picture>
+
+
+    <img src="./assets/block4.png" alt="block4" class="block4">
+    <picture>
+        <source srcset="./assets/block5.png"
+                media="(min-width: 900px)">
+        <img src="./assets/block5_min.png" alt="block5" class="block5">
+    </picture>
+
+
+    <section class="info">
+        <h1>Pushing boundaries with every step: marketing, design, production and more</h1>
+    </section>
+
+    <div class="location">
+        <div class="location_section">
+            <div>
+                <select class="language_select" name="language_select" id="language">
+                    <option value="en">Eng</option>
+                </select>
+            </div>
+            <div class="location_section_text">
+                <div>
+                    <p class="grey">Location</p>
+                </div>
+                <div>
+                    <p class="white">Budva</p>
+                    <p class="white">Moscow</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="book" class="button">Book Us</button>
+        </div>
+    </div>
+</section>
+<dialog class="popup" id="dialog">
+    <div class="popup-header">
+        <span class="popup-title">Leave your contact</span>
+        <img id="close-modal" class="close" src="./assets/close.png" alt="close">
+    </div>
+    <form id="contactForm">
+        <div class="popup-content">
+            <div class="popup-column">
+                <div class="input-group">
+                    <img class="input-icon" src="./assets/formIcons/email.png" alt="email">
+                    <input type="email" id="email" placeholder="e-mail ">
+                </div>
+                <div class="input-group">
+                    <img class="input-icon" src="./assets/formIcons/name.png" alt="name">
+                    <input type="text" id="name" placeholder="your name ">
+                </div>
+
+
+            </div>
+            <div class="popup-column">
+                <div class="input-group">
+                    <img class="input-icon" src="./assets/formIcons/phone.png" alt="phone">
+                    <input type="tel" id="phone" placeholder="phone number ">
+                </div>
+                <div class="input-group">
+                    <img class="input-icon" src="./assets/formIcons/company.png" alt="company">
+                    <input type="text" id="company" placeholder="company name ">
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="input-group">
+                <img class="input-icon" src="./assets/formIcons/industry.png" alt="industry">
+                <input type="text" id="industry" placeholder="your industry ">
+            </div>
+            <div class="input-group">
+                <img class="input-icon-textarea" src="./assets/formIcons/message.png" alt="request">
+                <textarea id="request" placeholder="your request "></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="contact-button">Contact Us</button>
+    </form>
+</dialog>
+<script src="./main.js"></script>
+</body>
+</html>
