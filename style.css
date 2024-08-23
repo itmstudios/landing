@@ -68,11 +68,10 @@ p {
 
 .location {
     display: flex;
-    width: 35%;
+    width: 40%;
     position: absolute;
     bottom: 10%;
     right: 10%;
-    justify-content: space-between;
     align-items: end;
 }
 
@@ -124,6 +123,7 @@ p {
     border-radius: 100px;
     padding: 0 32px;
     border: none;
+    margin: 0 auto;
 }
 
 .button:hover {
@@ -161,6 +161,7 @@ nav {
     top: 5%;
     right: 5%;
     width: 30%;
+    z-index: 10;
 }
 
 nav ul {
@@ -406,7 +407,7 @@ dialog[open] {
     .location {
         width: 90%;
         bottom: 6%;
-        right: -15%;
+        right: 0;
         align-items: start;
         flex-direction: column;
         gap: 24px
@@ -462,17 +463,35 @@ dialog[open] {
 
 
     .info h1 {
-        font-size: 29px;
+        font-size: 27px;
     }
 
+    dialog[open] {
+        max-width: 350px;
+    }
 
     .location {
         width: 90%;
         bottom: 6%;
         right: 2%;
     }
+
     .location_section {
         width: 100%;
     }
 
+    .btn-wrapper {
+        margin: 0 auto;
+    }
+
+    .button {
+        width: 350px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .location {
+        width: 95%;
+    }
 }

@@ -9,6 +9,7 @@ const request = document.getElementById('request')
 const phone = document.getElementById('phone')
 const company = document.getElementById('company')
 const form = document.getElementById('contactForm')
+const languageSelect = document.getElementById('language_select')
 
 
 // dialog logic
