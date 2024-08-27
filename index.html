@@ -13,13 +13,19 @@
     <header>
         <nav>
             <ul>
-                <li><p>Our portfolio</p></li>
-                <li><p>About us</p></li>
+                <li><a href="/ourwork.html">Our portfolio</a></li>
+                <li><p id="aboutBtn">About us</p></li>
             </ul>
         </nav>
     </header>
     <img src="./assets/Logo.png" alt="logo" class="logo">
-
+    <div id="aboutPanel" class="about-panel">
+        <button id="closeBtn" class="close-btn">✖</button>
+        <div class="content">
+            <h1>About Us</h1>
+            <p>This is a detailed description about us...</p>
+        </div>
+    </div>
     <picture>
         <source srcset="./assets/block1.png"
                 media="(min-width: 900px)">

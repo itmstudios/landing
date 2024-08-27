@@ -50,4 +50,11 @@ form.addEventListener('submit', function (event) {
     form.reset();
     dialog.close();
 });
+document.getElementById('aboutBtn').addEventListener('click', function() {
+    document.getElementById('aboutPanel').style.right = '0'; 
+});
+
+document.getElementById('closeBtn').addEventListener('click', function() {
+    document.getElementById('aboutPanel').style.right = '-50%'; 
+});
 
