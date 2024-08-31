@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { AppBar } from "@/components/appBar/component";
+import styles from "./layout.module.css";
+import classNames from "classnames";
+import { ibmPlexMono } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+       <body className={classNames(ibmPlexMono.className, styles.root)}>
+        <AppBar />
+        {children}
+        <div id="modal-container" />
+      </body>
     </html>
   );
 }
