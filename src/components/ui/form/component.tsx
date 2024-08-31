@@ -44,9 +44,14 @@ const Form: React.FC = () => {
             <div className={classNames(styles.inputWrapper, styles.phoneIcon)}>
                 <input
                     {...registerWithMask("phone", ['+99999999999'], {
-                        pattern: {
-                            value: /^\+\d{11}$/,
-                            message: 'Invalid phone number'
+                        validate: {
+                            noMaskChars: (value) => {
+                                if (!value.trim()) {
+                                    return true; 
+                                }
+                                const cleanValue = value.replace(/[_\s+()-]/g, '');
+                                return cleanValue.length === 11 || 'Phone number must be exactly 11 digits long';
+                            },
                         },
                     })}
                     type="tel"
@@ -55,6 +60,7 @@ const Form: React.FC = () => {
                         [styles.inputError]: errors.phone
                     })}
                 />
+
                 {errors.phone && (
                     <p className={styles.errorMessage}>{errors.phone.message}</p>
                 )}
