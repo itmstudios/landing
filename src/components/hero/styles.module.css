@@ -1,0 +1,167 @@
+.root {
+    margin: 0 auto;
+    max-width: 1320px;
+    height: 100%;
+    padding: 0 0 80px 0;
+    color: var(--color-white);
+    position: relative;
+    height: calc(100vh - 105px);
+}
+
+.info {
+    font-size: 2.5rem;
+    line-height: 52px;
+    position: absolute;
+    top: 76px;
+    right: 20px;
+    max-width: calc(100vw / 6 + 240px);
+}
+
+.logo_container {
+    position: absolute;
+    top: -52px;
+    overflow: hidden;
+    max-height: 85vh;
+    height: 100%;
+    width: 146px;
+    object-fit: fill;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
+}
+
+.block1 {
+    position: absolute;
+    top: 0;
+    left: -2%;
+    z-index: -1;
+    animation: pulse 5s ease-in-out infinite;
+    width: 50%;
+    height: auto;
+}
+
+.block2 {
+    position: absolute;
+    bottom: -30%;
+    right: 22%;
+    animation: moveBackAndForthY 10s ease-in-out infinite;
+    z-index: -1;
+    width: 35%;
+    height: auto;
+}
+
+.block3 {
+    position: absolute;
+    top: 30%;
+    right: 27%;
+    animation: rotate360 12s linear infinite;
+    z-index: -1;
+    width: 15%;
+    height: auto;
+}
+
+.block4 {
+    position: absolute;
+    top: 0;
+    right: 8%;
+    animation: moveBackAndForthY 10s ease-in-out infinite;
+    z-index: -1;
+    width: 25%;
+    height: auto;
+}
+
+.block5 {
+    position: absolute;
+    top: -105px;
+    left: 35%;
+    animation: moveBackAndForthYUp 10s ease-in-out infinite;
+    z-index: -1;
+    width: 25%;
+    height: auto;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveBackAndForthYUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveBackAndForthY {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bottom_menu {
+    position: absolute;
+    bottom: 84px;
+    right: 0;
+    width: calc(100vw / 6 + 240px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom_menu_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 252px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.cities {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.location {
+    font-size: 1.25rem;
+    color: var(--color-grey);
+    margin-left: 16px;
+}
