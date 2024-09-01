@@ -1,7 +1,26 @@
 .root {
     display: flex;
     height: 105px;
+    position: relative;
+    z-index: 10;
 }
+
+.logo_container {
+    position: absolute;
+    top: 53px;
+    cursor: pointer;
+    transform-origin: top center;
+}
+
+.logo {
+    max-height: 85vh;
+    fill: var(--white-color);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
 
 .navBar {
     margin-left: auto;
