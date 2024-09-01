@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './styles.module.css';
-import Logo from '../../../public/assets/Logo.svg';
+import { Logo } from "@/components/icons/components";
 import Block1 from '../../../public/assets/images/block1.png';
 import Block1_min from '../../../public/assets/images/block1_min.png';
 import Block2 from '../../../public/assets/images/block2.png';
@@ -40,9 +40,6 @@ function Hero() {
             </picture>
 
             <section className={styles.hero}>
-                <div className={styles.logo_container}>
-                    <Image src={Logo} className={styles.logo} alt="logo" />
-                </div>
                 <h1 className={styles.info}>
                     Pushing boundaries with every step: marketing, design, production and more
                 </h1>

@@ -3,7 +3,7 @@
     max-width: 1320px;
     height: 100%;
     padding: 0 0 80px 0;
-    color: var(--color-white);
+    color: var(--white-color);
     position: relative;
     height: calc(100vh - 105px);
 }
@@ -15,20 +15,6 @@
     top: 76px;
     right: 0;
     max-width: 490px;
-}
-
-.logo_container {
-    position: absolute;
-    top: -52px;
-    overflow: hidden;
-    max-height: 85vh;
-    height: 100%;
-    object-fit: fill;
-}
-
-.logo {
-    width: auto;
-    height: 100%;
 }
 
 .block1 {
