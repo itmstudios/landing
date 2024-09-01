@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './styles.module.css';
-import Logo from '../../../public/assets/Logo.png';
+import Logo from '../../../public/assets/Logo.svg';
 import Block1 from '../../../public/assets/images/block1.png';
 import Block1_min from '../../../public/assets/images/block1_min.png';
 import Block2 from '../../../public/assets/images/block2.png';

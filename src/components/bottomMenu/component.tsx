@@ -19,11 +19,9 @@ export const BottomMenu = () => {
                 </div>
             </div>
             <Button onClick={() => setModalOpen(true)} text="Contact Us" />
-            {isModalOpen && (
                 <Modal>
-                    <ContactUsModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+                    <ContactUsModal onClose={() => setModalOpen(false)} isOpen={isModalOpen} />
                 </Modal>
-            )}
         </div>
     );
 };

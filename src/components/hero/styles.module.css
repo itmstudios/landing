@@ -57,7 +57,7 @@
     right: 27%;
     animation: rotate360 12s linear infinite;
     z-index: -1;
-    width: 12%;
+    width: 11%;
     height: auto;
 }
 
@@ -67,7 +67,7 @@
     right: 8%;
     animation: moveBackAndForthY 10s ease-in-out infinite;
     z-index: -1;
-    width: 25%;
+    width: 22%;
     height: auto;
 }
 

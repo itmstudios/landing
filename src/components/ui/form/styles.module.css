@@ -89,7 +89,7 @@
     content: '';
     position: absolute;
     left: 10px;
-    top: 5px;
+    top: 15px;
     width: 16px;
     height: 16px;
     background-size: contain;
@@ -121,7 +121,8 @@
 }
 
 .text_area {
-    height: 80px;
+    margin-top: 12px;
+    height: 84px;
 }
 
 .message {

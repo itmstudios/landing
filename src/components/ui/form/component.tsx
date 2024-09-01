@@ -110,7 +110,6 @@ const Form: React.FC = () => {
                 {errors.message && <p className={styles.errorMessage}>{errors.message.message}</p>}
             </div>
 
-
             <Button
                 type="submit"
                 text="Contact Us"
