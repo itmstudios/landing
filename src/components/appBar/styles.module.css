@@ -1,21 +1,19 @@
 .root {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
+    display: flex;
     height: 105px;
 }
 
 .navBar {
-    grid-column: 2;
+    margin-left: auto;
 }
 
 .menu {
     display: flex;
     flex-direction: row;
-    max-width: calc(100vw / 6 + 240px);;
-    margin-left: auto;
+    max-width: 490px;
     justify-content: space-between;
     padding: 40px 0;
+    gap: 240px;
 }
 
 .menu li {
@@ -39,10 +37,12 @@
     transition: transform 0.3s ease;
 }
 
-.menu li:hover::after {
+.menu li:hover::after,
+.menu li.active::after {
     transform: scaleX(1);
 }
 
-.menu li:hover {
+.menu li:hover,
+.menu li.active { 
     cursor: pointer;
 }

@@ -1,14 +1,13 @@
 "use client"
-import { useState } from "react"
-import Modal from "../modal/component"
-import { ContactUsModal } from "../modal/contactUs/component"
-import { Button } from "../ui/button/component"
-import styles from "./styles.module.css"
+import { useState } from "react";
+import Modal from "../modal/component";
+import { ContactUsModal } from "../modal/contactUs/component";
+import { Button } from "../ui/button/component";
+import styles from "./styles.module.css";
 
 export const BottomMenu = () => {
     const [isModalOpen, setModalOpen] = useState(false);
-    const openModal = () => setModalOpen(true);
-    const closeModal = () => setModalOpen(false);
+
     return (
         <div className={styles.root}>
             <div className={styles.bottom_menu_wrapper}>
@@ -19,10 +18,12 @@ export const BottomMenu = () => {
                     <span>Moscow</span>
                 </div>
             </div>
-            <Button onClick={openModal} text="Contact Us" />
-            <Modal>
-                <ContactUsModal isOpen={isModalOpen} onClose={closeModal} />
-            </Modal>
+            <Button onClick={() => setModalOpen(true)} text="Contact Us" />
+            {isModalOpen && (
+                <Modal>
+                    <ContactUsModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+                </Modal>
+            )}
         </div>
-    )
-}
+    );
+};

@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 80px;
     right: 0;
-    width: calc(100vw / 6 + 240px);
+    width: 490px;
     display: flex;
     justify-content: space-between;
 }
@@ -10,7 +10,7 @@
 .bottom_menu_wrapper{
     display: flex;
     flex-direction: row;
-    width: 252px;
+    width: 254px;
     align-items: flex-end;
     justify-content: space-between;
 }
