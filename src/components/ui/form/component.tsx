@@ -1,4 +1,3 @@
-import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import styles from './styles.module.css';
 import { Button } from '../button/component';
@@ -23,10 +22,11 @@ const Form: React.FC = () => {
     };
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <form noValidate className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <div className={classNames(styles.inputWrapper, styles.emailIcon)}>
                 <input
                     {...register('email', {
+                        required: 'Email is required',
                         pattern: {
                             value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                             message: 'Invalid email address'
@@ -35,7 +35,6 @@ const Form: React.FC = () => {
                     type="email"
                     id="email"
                     placeholder="e-mail"
-                    {...register('email', { required: 'Email is required' })}
                     className={styles.inputField}
                 />
                 {errors.email && <p className={styles.errorMessage}>{errors.email.message}</p>}
