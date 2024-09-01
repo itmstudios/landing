@@ -14,7 +14,7 @@
     position: absolute;
     top: 76px;
     right: 0;
-    max-width: calc(100vw / 6 + 240px);
+    max-width: 490px;
 }
 
 .logo_container {
@@ -134,33 +134,4 @@
     100% {
         transform: translateY(0);
     }
-}
-
-.bottom_menu {
-    position: absolute;
-    bottom: 84px;
-    right: 0;
-    width: calc(100vw / 6 + 240px);
-    display: flex;
-    justify-content: space-between;
-}
-
-.bottom_menu_wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 252px;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-
-.cities {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.location {
-    font-size: 1.25rem;
-    color: var(--color-grey);
-    margin-left: 16px;
 }

@@ -46,7 +46,7 @@ const Form: React.FC = () => {
                         validate: {
                             noMaskChars: (value) => {
                                 if (!value.trim()) {
-                                    return true; 
+                                    return true;
                                 }
                                 const cleanValue = value.replace(/[_\s+()-]/g, '');
                                 return cleanValue.length === 11 || 'Phone number must be exactly 11 digits long';
@@ -64,6 +64,7 @@ const Form: React.FC = () => {
                     <p className={styles.errorMessage}>{errors.phone.message}</p>
                 )}
             </div>
+
 
             <div className={classNames(styles.inputWrapper, styles.nameIcon)}>
                 <input
@@ -99,22 +100,21 @@ const Form: React.FC = () => {
                 {errors.industry && <p className={styles.errorMessage}>{errors.industry.message}</p>}
             </div>
 
-            <div className={classNames(styles.inputWrapper, styles.messageIcon, styles.doubleCell, styles.message)}>
-                <input
-                    type="text"
+            <div className={classNames(styles.text_area_wrapper, styles.messageIcon, styles.doubleCell, styles.message)}>
+                <textarea
                     id="message"
                     placeholder="your request"
                     {...register('message', { required: 'Message is required' })}
-                    className={styles.inputField}
+                    className={classNames(styles.inputField, styles.text_area)}
                 />
                 {errors.message && <p className={styles.errorMessage}>{errors.message.message}</p>}
             </div>
+
 
             <Button
                 type="submit"
                 text="Contact Us"
                 className={styles.button}
-                onClick={() => { }}
             />
         </form>
 
