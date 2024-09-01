@@ -1,12 +1,17 @@
-"use client"
+"use client";
 import Link from "next/link";
 import styles from "./styles.module.css";
 import { usePathname } from "next/navigation"; 
+import { useState } from "react";
+import Modal from "../modal/component";
+import { SideBar } from "../modal/sideBar/component";
 
 export const AppBar: React.FC = () => {
   const pathname = usePathname();
 
   const isActive = (path: string) => pathname === path;
+
+  const [isModalOpen, setModalOpen] = useState(false);
 
   return (
     <header className={styles.root}>
@@ -17,13 +22,16 @@ export const AppBar: React.FC = () => {
               Our portfolio
             </Link>
           </li>
-          <li className={isActive('/about') ? styles.active : ''}>
-            <Link href="/about">
+          <li>
+            <div onClick={() => setModalOpen(true)}>
               About Us
-            </Link>
+            </div>
           </li>
         </ul>
       </nav>
+        <Modal>
+          <SideBar isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+        </Modal>
     </header>
   );
 };
