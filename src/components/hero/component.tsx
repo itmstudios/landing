@@ -22,7 +22,7 @@ function Hero() {
 
             <picture className={styles.block2}>
                 <source srcSet={Block2.src} media="(min-width: 900px)" />
-                <Image src={Block2_min}  alt="block2" layout="responsive" />
+                <Image src={Block2_min} alt="block2" layout="responsive" />
             </picture>
 
             <picture className={styles.block3}>
@@ -31,10 +31,10 @@ function Hero() {
             </picture>
 
             <picture className={styles.block4}>
-            <Image src={Block4} alt="block4" layout="responsive" />
+                <Image src={Block4} alt="block4" layout="responsive" />
             </picture>
 
-            <picture  className={styles.block5}>
+            <picture className={styles.block5}>
                 <source srcSet={Block5.src} media="(min-width: 900px)" />
                 <Image src={Block5_min} alt="block5" layout="responsive" />
             </picture>

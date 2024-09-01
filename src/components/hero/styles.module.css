@@ -13,7 +13,7 @@
     line-height: 52px;
     position: absolute;
     top: 76px;
-    right: 20px;
+    right: 0;
     max-width: calc(100vw / 6 + 240px);
 }
 
@@ -23,7 +23,6 @@
     overflow: hidden;
     max-height: 85vh;
     height: 100%;
-    width: 146px;
     object-fit: fill;
 }
 
@@ -54,11 +53,11 @@
 
 .block3 {
     position: absolute;
-    top: 30%;
+    top: 35%;
     right: 27%;
     animation: rotate360 12s linear infinite;
     z-index: -1;
-    width: 15%;
+    width: 12%;
     height: auto;
 }
 
