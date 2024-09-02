@@ -1,0 +1,54 @@
+.wrapper {
+    max-width: 856px;
+    margin: 0 auto;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 44px;
+    justify-content: space-between;
+}
+
+.button {
+    margin-left: auto;
+}
+
+.link {
+    font-size: 1.5rem;
+    line-height: 31px;
+    text-decoration: underline;
+}
+
+.header {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: var(--grey-color-2);
+    line-height: 19px;
+}
+
+.scrollDown {
+    font-size: 0.75rem;
+    line-height: 15px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    margin-bottom: 126px;
+}
+
+.layout_image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

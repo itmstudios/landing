@@ -3,8 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './styles.module.css';
 import { ibmPlexMono, inter } from '@/app/fonts';
 import classNames from 'classnames';
-import Link from 'next/link';
-import { Arrow } from '@/components/icons/components';
+import { LinkWithArrow } from '../linkWithArrow/component';
 
 interface AccordionItemProps {
     title: string;
@@ -14,7 +13,7 @@ interface AccordionItemProps {
     onLinkClick?: () => void;
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, listItems, buttonText, onLinkClick = () => { } }) => {    
+const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, listItems, buttonText, onLinkClick = () => { } }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleAccordion = () => {
@@ -49,10 +48,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, listItems
                             </ul>
                         )}
                         {buttonText && (
-                            <div className={styles.link} onClick={() => onLinkClick()}>
-                                <Link href="/projects">{buttonText}</Link>
-                                <Arrow className={styles.arrow} />
-                            </div>
+                            <LinkWithArrow text={buttonText} variant='left' href='/projects/1' onClick={onLinkClick}/>
                         )}
                     </motion.div>
                 )}
@@ -65,7 +61,7 @@ interface AccordionProps {
     onClose: () => void;
 }
 
-export const Accordion: React.FC<AccordionProps> = ({onClose }) => {
+export const Accordion: React.FC<AccordionProps> = ({ onClose }) => {
     const items = [
         {
             title: 'Brand Design',

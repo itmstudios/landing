@@ -1,8 +1,3 @@
-
-
-export default function ProjectsPage() {
-  return (
-    <>
-    </>
-  );
+export default function Page() {
+    return null;
 }

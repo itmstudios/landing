@@ -1,0 +1,37 @@
+.wrapper {
+    max-width: 856px;
+    margin: 0 auto;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 44px;
+}
+
+.project_name {
+    font-size: 1.5rem;
+    line-height: 31px;
+    text-decoration: underline;
+}
+
+.link {
+    font-size: 0.75rem;
+    line-height: 15px;
+}
+
+.header {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: var(--grey-color-2);
+    line-height: 19px;
+}
+
