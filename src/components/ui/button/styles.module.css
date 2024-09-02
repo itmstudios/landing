@@ -2,9 +2,9 @@
 .button {
     min-height: 40px;
     width: fit-content;
-    padding-left: 35px;
-    padding-right: 35px;
-    background-color: var(--color-orange);
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: var(--orange-color);
     font-size: 16px;
     color: var(--color-black);
     border-radius: 100px;

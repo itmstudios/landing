@@ -21,8 +21,10 @@
     width: 100%;
     background-color: var(--main-bg-color-2);
     border: none;
-    border-bottom: 1px solid  var(--white-color);;
-    color:  var(--white-color);;
+    border-bottom: 1px solid var(--white-color);
+    ;
+    color: var(--white-color);
+    ;
     font-size: 16px;
     padding: 0 10px;
     padding-left: 36px;
@@ -31,20 +33,24 @@
 
 .inputField::selection,
 .text_area::selection {
-    background: var(--color-orange);
-    color:  var(--white-color);;
+    background: var(--orange-color);
+    color: var(--white-color);
+    ;
 }
 
 .inputField::spelling-error,
 .text_area::spelling-error {
-    color:  var(--white-color);;
+    color: var(--orange-color);
+    ;
 }
 
 .inputField:-webkit-autofill,
 .text_area:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px var(--main-bg-color-2) inset;
-    -webkit-text-fill-color:  var(--white-color);;
-    color:  var(--white-color);;
+    -webkit-text-fill-color: var(--white-color);
+    ;
+    color: var(--white-color);
+    ;
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -62,7 +68,7 @@
 
 .errorMessage {
     margin-top: 4px;
-    color: var(--color-orange);
+    color: var(--orange-color);
 }
 
 .emailIcon::before {
@@ -113,7 +119,7 @@
 
 .inputField:focus,
 .text_area:focus {
-    border-bottom-color: var(--color-orange);
+    border-bottom-color: var(--orange-color);
 }
 
 .inputField {
