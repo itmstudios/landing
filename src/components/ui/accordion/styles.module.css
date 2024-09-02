@@ -1,0 +1,98 @@
+.accordionItem {
+    max-width: 420px;
+    width: 100%;
+    margin-left: auto;
+    background-color: var(--main-bg-color-2);
+}
+
+.accordionButton {
+    background-color: var(--main-bg-color-2);
+    color: var(--white-color);
+    padding: 0;
+    height: 26px;
+    max-width: 420px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.accordionButton::after,
+.accordionButton::before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    width: 14px;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: transform 0.3s ease;
+}
+
+.accordionButton::before {
+    transform: rotate(90deg);
+}
+
+.accordionButton[aria-expanded="true"]::before {
+    transform: rotate(360deg);
+}
+
+.accordionButton[aria-expanded="true"]::after {
+    transform: rotate(360deg);
+}
+
+.accordionContent {
+    overflow: hidden; 
+}
+
+.content {
+    font-size: 1rem;
+    line-height: 19px;
+    margin-bottom: 16px;
+}
+
+.list {
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+    padding-left: 22px; 
+}
+
+.listItem {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 19px;
+    margin-bottom: 16px;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 24px;
+    color: var(--orange-color);
+}
+
+
+.arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.link:hover .arrow {
+    transform: translateX(5px);
+}
+
+
+
+
