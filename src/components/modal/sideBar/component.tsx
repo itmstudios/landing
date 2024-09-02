@@ -49,13 +49,11 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                         <p className={classNames(inter.className, styles.description)}>
                             We combine creative marketing with cutting-edge development technologies. We launch unique products, develop designs, and create marketing strategies that help grow your brand and attract new customers. No matter the complexity of the task, whether it’s creating a website or app, photo/video content, motion or graphic design, we are ready to provide you with a full range of services to achieve your goals.
                         </p>
-                        <div className={styles.image_container}>
                             <Image
                                 src={Photo}
                                 alt="Photo"
                                 className={styles.image}
                             />
-                        </div>
                         <Button className={styles.contact_us_button} onClick={() => setModalOpen(true)} text="Contact Us" />
                         <Modal>
                             <ContactUsModal onClose={() => setModalOpen(false)} isOpen={isModalOpen} />

@@ -1,6 +1,7 @@
 .root {
     display: flex;
     height: 105px;
+    width: 100%;
     position: relative;
     z-index: 10;
 }
@@ -18,15 +19,14 @@
 }
 
 .navBar {
-    margin-left: auto;
-    max-width: 490px;
     width: 100%;
 }
 
 .menu {
-
+    margin-left: auto;
     display: flex;
     flex-direction: row;
+    max-width: 490px;
     justify-content: space-between;
     padding: 40px 0;
 }

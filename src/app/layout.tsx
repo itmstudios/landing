@@ -4,6 +4,7 @@ import { AppBar } from "@/components/appBar/component";
 import styles from "./layout.module.css";
 import classNames from "classnames";
 import { ibmPlexMono } from "./fonts";
+import { Footer } from "@/components/footer/component";
 
 export const metadata: Metadata = {
   title: "Create Next App",
