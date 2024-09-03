@@ -1,10 +1,13 @@
 
 import React from 'react';
 import styles from "./styles.module.css";
-import Project3_1 from "../../../../public/assets/images/Project3_1.jpg";
-import Project3_2 from "../../../../public/assets/images/Project3_1.jpg";
-import Project3_3 from "../../../../public/assets/images/Project3_1.jpg";
+import Project3 from "../../../../public/assets/images/Project3.jpg";
+import Project3_2 from "../../../../public/assets/images/Project3_2.jpg";
 import Image from "next/image";
+import Link from 'next/link';
+import { Button } from '@/components/ui/button/component';
+import Layout_beauty from "../../../../public/assets/images/Layout_beauty.jpg";
+import Layout_barber from "../../../../public/assets/images/Layout_barber.jpg";
 import classNames from 'classnames';
 import { inter } from '@/app/fonts';
 import { LinkWithArrow } from '@/components/ui/linkWithArrow/component';
@@ -13,23 +16,23 @@ const ProjectPage: React.FC = () => {
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
-        <div className={styles.images_container}>
-          <Image src={Project3_1} alt={"project 3"} className={styles.image1}></Image>
-          <Image src={Project3_2} alt={"project 3"} className={styles.image2}></Image>
-          <Image src={Project3_3} alt={"project 3"} className={styles.image3}></Image>
-        </div>
+          <Image src={Project3} alt={"project 3"} className={styles.image}></Image>
         <div className={styles.container}>
           <div>
-            <p className={styles.project_name}>Name</p>
-            <h1 className={classNames(inter.className, styles.header)}>Real Estate</h1>
+            <Link href={'/'} className={classNames(inter.className, styles.link)}>Сonsept for sale</Link>
+            <h1 className={classNames(inter.className, styles.header)}>Design for Coffee shop</h1>
           </div>
-          <div>
-            <p>Production</p>
-            <p>2024</p>
-          </div>
+          <div className={styles.scrollDown}>Scroll down</div>
+          <Button className={styles.button} text={'I wan’t this one'} />
         </div>
       </div>
-      <LinkWithArrow text={'Next Project'} href='/projects/1'/>
+
+      <LinkWithArrow text={'Next Project'} href='/projects/4' />
+
+      <div className={classNames(styles.wrapper, styles.images)}>
+        <Image src={Project3_2} alt={"Project 3"} className={styles.bottom_image}></Image>
+      </div>
+
     </div>
   );
 };
