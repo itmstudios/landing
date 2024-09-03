@@ -4,7 +4,6 @@ import { AppBar } from "@/components/appBar/component";
 import styles from "./layout.module.css";
 import classNames from "classnames";
 import { ibmPlexMono } from "./fonts";
-import { Footer } from "@/components/footer/component";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <body className={classNames(ibmPlexMono.className, styles.root)}>
+      <body className={classNames(ibmPlexMono.className, styles.root)}>
         <AppBar />
-        {children}
+        <div className={styles.wrapper}>
+          {children}
+        </div>
         <div id="modal-container" />
       </body>
     </html>

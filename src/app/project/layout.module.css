@@ -6,6 +6,7 @@
     height: 100%;
     background-color: var(--main-bg-color-2);
     overflow-y: auto;
+    padding-bottom: 84px;
 }
 
 .header {
@@ -15,12 +16,28 @@
     height: 105px;
     width: 100%;
     background-color: var(--main-bg-color-2);
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .wrapper {
     margin: 0 auto;
     max-width: 1320px;
-    padding: 105px 20px 84px 20px;
+    padding-top: 105px;
     color: var(--white-color);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+}
+
+.logo_container {
+    padding-left: 20px;
+    cursor: pointer;
+    transform-origin: top center;
+}
+
+.logo {
+    max-width: 72px;
+    height: auto;
+    /* max-height: 85vh; */
+    fill: var(--white-color);
 }

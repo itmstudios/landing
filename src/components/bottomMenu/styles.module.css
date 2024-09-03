@@ -1,13 +1,10 @@
 .root {
-    position: absolute;
-    bottom: 80px;
-    right: 0;
-    width: 490px;
+    max-width: 490px;
     display: flex;
     justify-content: space-between;
 }
 
-.bottom_menu_wrapper{
+.bottom_menu_wrapper {
     display: flex;
     flex-direction: row;
     width: 254px;
@@ -25,4 +22,35 @@
     font-size: 1.25rem;
     color: var(--color-grey);
     margin-left: 16px;
+}
+
+@media screen and (max-width: 500px) {
+    .root {
+        width: 100%;
+        flex-direction: column;
+        gap: 54px;
+        bottom: 44px;
+    }
+
+    .bottom_menu_wrapper {
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+
+    .location {
+        margin-right: 24px;
+        order: 1;
+        margin-left: 0;
+    }
+
+    .cities {
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .root {
+        bottom: 22px;
+        gap: 32px;
+    }
 }
