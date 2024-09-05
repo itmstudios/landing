@@ -15,7 +15,7 @@ export const AppBar: React.FC = () => {
       <nav className={styles.navBar}>
         <ul className={styles.menu}>
           <li className={pathname !== '/' ? styles.active : ''}>
-            <Link href="/project/1">
+            <Link href="/project/barder-shop">
               Our portfolio
             </Link>
           </li>

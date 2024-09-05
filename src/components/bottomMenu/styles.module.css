@@ -7,9 +7,10 @@
 .bottom_menu_wrapper {
     display: flex;
     flex-direction: row;
-    width: 254px;
+    /* width: 254px; */
     align-items: flex-end;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .cities {
@@ -21,7 +22,6 @@
 .location {
     font-size: 1.25rem;
     color: var(--color-grey);
-    margin-left: 16px;
 }
 
 @media screen and (max-width: 500px) {
@@ -38,7 +38,6 @@
     }
 
     .location {
-        margin-right: 24px;
         order: 1;
         margin-left: 0;
     }

@@ -1,9 +1,12 @@
 .root {
+    margin: 0 auto;
+    max-width: 1320px;
+    padding: 0 20px;
     display: flex;
     height: 105px;
     width: 100%;
     position: relative;
-    z-index: 10;
+    z-index: 51;
 }
 
 .logo_container {

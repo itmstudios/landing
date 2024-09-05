@@ -11,11 +11,11 @@ const ProjectPage: React.FC = () => {
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
-        <Image src={Project4} alt={"project 4"} className={styles.image}></Image>
+        <Image src={Project4} alt={"project real-estate"} className={styles.image}></Image>
         <div className={styles.container}>
           <div>
             <p className={styles.project_name}>Name</p>
-            <h1 className={classNames(inter.className, styles.header)}>Real Estate</h1>
+            <h1 className={classNames(inter.className, styles.header)}>Video production</h1>
           </div>
           <div>
             <p className={styles.description}>Production</p>
@@ -23,7 +23,7 @@ const ProjectPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <LinkWithArrow text={'Next Project'} href='/project/5' />
+      <LinkWithArrow text={'Next Project'} href='/project/barder-shop' />
     </div>
   );
 };

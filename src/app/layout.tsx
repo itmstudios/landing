@@ -18,10 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={classNames(ibmPlexMono.className, styles.root)}>
-        <AppBar />
-        <div className={styles.wrapper}>
+          <AppBar />
           {children}
-        </div>
         <div id="modal-container" />
       </body>
     </html>

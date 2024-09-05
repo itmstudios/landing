@@ -27,6 +27,14 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
         onClose();
     };
 
+    const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        onClose();
+    };
+
+    const handleSidebarClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        e.stopPropagation();
+    };
+
     return (
         <AnimatePresence>
             {isOpen && (
@@ -36,6 +44,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
+                    onClick={handleOverlayClick}
                 >
                     <motion.div
                         className={styles.root}
@@ -43,6 +52,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                         animate={{ x: "0%", opacity: 1 }}
                         exit={{ x: "50%", opacity: 0 }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
+                        onClick={handleSidebarClick}
                     >
                         <CloseButton onClose={onClose} />
                         <h2 className={classNames(ibmPlexMono.className, styles.heading)}>About Us</h2>

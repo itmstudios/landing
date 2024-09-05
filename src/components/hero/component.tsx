@@ -12,29 +12,24 @@ import { Logo } from '../icons/components';
 function Hero() {
     return (
         <div className={styles.root}>
-            <Image src={Block1} className={styles.block1} alt="block1" />
-
-            <Image src={Block2} className={styles.block2} alt="block2" />
-
-            <Image src={Block3} className={styles.block3} alt="block3" />
-
-            <Image src={Block4} className={styles.block4} alt="block4" />
-
-            <Image src={Block5} className={styles.block5} alt="block5" />
-
-            <div className={styles.logo_container}>
-                <Link href={'/project/1'}>
-                    <Logo className={styles.logo} />
-                </Link>
+            <div className={styles.wrapper}>
+                <Image src={Block1} className={styles.block1} alt="block1" />
+                <Image src={Block2} className={styles.block2} alt="block2" />
+                <Image src={Block3} className={styles.block3} alt="block3" />
+                <Image src={Block4} className={styles.block4} alt="block4" />
+                <Image src={Block5} className={styles.block5} alt="block5" />
+                <div className={styles.logo_container}>
+                    <Link href={'/'}>
+                        <Logo className={styles.logo} />
+                    </Link>
+                </div>
+                <section className={styles.hero}>
+                    <h1 className={styles.heading}>
+                        Pushing boundaries with every step: marketing, design, production and more
+                    </h1>
+                    <BottomMenu />
+                </section>
             </div>
-
-            <section className={styles.hero}>
-                <h1 className={styles.heading}>
-                    Pushing boundaries with every step: marketing, design, production and more
-                </h1>
-
-                <BottomMenu />
-            </section>
         </div>
     );
 }
