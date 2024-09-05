@@ -1,7 +1,7 @@
 .root {
     margin: 0 auto;
     max-width: 1320px;
-    padding: 0 20px;
+    padding: 0 20px 84px 20px;
     display: flex;
     justify-content: space-between;
     width: 100%;

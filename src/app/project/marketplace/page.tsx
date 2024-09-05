@@ -12,7 +12,7 @@ const ProjectPage: React.FC = () => {
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
-          <Image src={Project2} alt={"project 2"} className={styles.image}></Image>
+          <Image src={Project2} alt={"project marketplace"} className={styles.image}></Image>
         <div className={styles.container}>
           <div>
             <p className={styles.project_name}>A-market</p>
@@ -27,7 +27,7 @@ const ProjectPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <LinkWithArrow text={'Next Project'} href='/project/3'/>
+      <LinkWithArrow text={'Next Project'} href='/project/ecommers'/>
     </div>
   );
 };

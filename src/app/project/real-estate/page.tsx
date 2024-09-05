@@ -14,9 +14,9 @@ const ProjectPage: React.FC = () => {
     <div className={styles.root}>
       <div className={styles.wrapper}>
         <div className={styles.images_container}>
-          <Image src={Project5_1} alt={"project 5"} className={styles.image1}></Image>
-          <Image src={Project5_2} alt={"project 5"} className={styles.image2}></Image>
-          <Image src={Project5_3} alt={"project 5"} className={styles.image3}></Image>
+          <Image src={Project5_1} alt={"project video-production "} className={styles.image1}></Image>
+          <Image src={Project5_2} alt={"project video-production "} className={styles.image2}></Image>
+          <Image src={Project5_3} alt={"project video-production "} className={styles.image3}></Image>
         </div>
         <div className={styles.container}>
           <div>
@@ -29,7 +29,7 @@ const ProjectPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <LinkWithArrow text={'Next Project'} href='/project/1'/>
+      <LinkWithArrow text={'Next Project'} href='/project/video-production'/>
     </div>
   );
 };

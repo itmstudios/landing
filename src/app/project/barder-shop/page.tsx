@@ -13,9 +13,10 @@ import { LinkWithArrow } from '@/components/ui/linkWithArrow/component';
 
 const ProjectPage: React.FC = () => {
   return (
+
     <div className={styles.root}>
       <div className={styles.wrapper}>
-          <Image src={Project1} alt={"project 1"} className={styles.image}></Image>
+        <Image src={Project1} alt={"project barder-shop"} className={styles.image}></Image>
         <div className={styles.container}>
           <div>
             <Link href={'/'} className={classNames(inter.className, styles.link)}>Сonsept for sale</Link>
@@ -24,14 +25,12 @@ const ProjectPage: React.FC = () => {
           <Button className={styles.button} text={'I wan’t this one'} />
         </div>
       </div>
+      <LinkWithArrow text={'Next Project'} href='/project/ecommers' />
 
-      <LinkWithArrow text={'Next Project'} href='/project/2' />
-
-      <div className={classNames(styles.wrapper, styles.images)}>
+      <div className={classNames(styles.images)}>
         <Image src={Layout_beauty} alt={"Layout beauty"} className={styles.layout_image}></Image>
         <Image src={Layout_barber} alt={"Layout barber"} className={styles.layout_image}></Image>
       </div>
-
     </div>
   );
 };

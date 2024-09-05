@@ -1,12 +1,6 @@
 .root {
-    margin: 0 auto;
-    max-width: 1320px;
-    padding: 0px 20px 84px 20px;
-    color:  var(--white-color);
-    height: 100vh;
+    color: var(--white-color);
     display: grid;
     grid-template-rows: auto 1fr auto;
-    height: 100%;
-    overflow: hidden;
+    position: relative;
 }
-
