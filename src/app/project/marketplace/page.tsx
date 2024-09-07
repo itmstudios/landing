@@ -18,8 +18,8 @@ const ProjectPage: React.FC = () => {
             <p className={styles.project_name}>A-market</p>
             <h1 className={classNames(inter.className, styles.header)}>Marketplace</h1>
           </div>
-
-          <Link href={"https://a-market.me"} target="_blank" rel="noopener noreferrer" className={classNames(inter.className, styles.link)}>Explore here</Link>
+{/* 
+          <Link href={"https://a-market.me"} target="_blank" rel="noopener noreferrer" className={classNames(inter.className, styles.link)}>Explore here</Link> */}
 
           <div>
             <p className={styles.description}>Design,Developing<br/>and Marketing</p>

@@ -4,8 +4,6 @@ import { Button } from '../button/component';
 import classNames from 'classnames';
 import { useHookFormMask } from 'use-mask-input';
 import { usePopup } from '@/contexts/popupContexts';
-import SubmitStatus from '@/components/popup/submitStatus/component';
-import Popup from '@/components/popup/component';
 
 interface FormValues {
     email: string;

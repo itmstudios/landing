@@ -22,10 +22,9 @@
     background-color: var(--main-bg-color-2);
     border: none;
     border-bottom: 1px solid var(--white-color);
-    ;
     color: var(--white-color);
-    ;
-    font-size: 16px;
+    font-size: 1rem;
+    line-height: 24px;
     padding: 0 10px;
     padding-left: 36px;
     outline: none;
@@ -41,7 +40,6 @@
 .inputField::spelling-error,
 .text_area::spelling-error {
     color: var(--orange-color);
-    ;
 }
 
 .inputField:-webkit-autofill,
@@ -157,5 +155,11 @@
     color: var(--orange-color)d;
 }
 
+@media screen and (max-width: 700px) {
+    .form {
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-@media (max-width: 768px) {}
+}

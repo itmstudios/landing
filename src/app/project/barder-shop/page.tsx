@@ -1,5 +1,6 @@
+"use client"
 
-import React from 'react';
+import React, { useState } from 'react';
 import styles from "./styles.module.css";
 import Project1 from "../../../../public/assets/images/Project1.jpg";
 import Image from "next/image";
@@ -10,8 +11,12 @@ import Layout_barber from "../../../../public/assets/images/Layout_barber.jpg";
 import classNames from 'classnames';
 import { inter } from '@/app/fonts';
 import { LinkWithArrow } from '@/components/ui/linkWithArrow/component';
+import Modal from '@/components/modal/component';
+import { ContactUsModal } from '@/components/modal/contactUs/component';
 
 const ProjectPage: React.FC = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  
   return (
 
     <div className={styles.root}>
@@ -22,15 +27,19 @@ const ProjectPage: React.FC = () => {
             <Link href={'/'} className={classNames(inter.className, styles.link)}>Сonsept for sale</Link>
             <h1 className={classNames(inter.className, styles.header)}>Design for Beauty salon and Barber shop</h1>
           </div>
-          <Button className={styles.button} text={'I wan’t this one'} />
+          <Button className={styles.button} onClick={() => setModalOpen(true)} text={'I wan’t this one'} />
         </div>
       </div>
-      <LinkWithArrow text={'Next Project'} href='/project/ecommers' />
+      <LinkWithArrow text={'Next Project'} href='/project/marketplace' />
 
       <div className={classNames(styles.images)}>
         <Image src={Layout_beauty} alt={"Layout beauty"} className={styles.layout_image}></Image>
         <Image src={Layout_barber} alt={"Layout barber"} className={styles.layout_image}></Image>
       </div>
+
+      <Modal>
+        <ContactUsModal onClose={() => setModalOpen(false)} isOpen={isModalOpen} />
+      </Modal>
     </div>
   );
 };
