@@ -144,5 +144,18 @@
     margin-left: auto;
 }
 
+.submitStatus {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.success {
+    color: var(--white-color);
+}
+
+.error {
+    color: var(--orange-color)d;
+}
+
 
 @media (max-width: 768px) {}

@@ -33,7 +33,7 @@ export const ContactUsModal: React.FC<ContactUsModalProps> = ({ isOpen, onClose 
                         <h2 className={classNames(ibmPlexMono.className, styles.heading)}>
                             Leave your contact
                         </h2>
-                        <Form />
+                        <Form onSuccess={onClose} />
                     </motion.div>
                 </motion.div>
             )}
