@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { Logo } from '../icons/components';
 
 function Hero() {
+
     return (
         <div className={styles.root}>
             <div className={styles.wrapper}>
