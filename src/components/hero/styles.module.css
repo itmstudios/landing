@@ -58,12 +58,12 @@
 
 .block2 {
     position: absolute;
-    bottom: -25%;
+    bottom: -30%;
     right: 22%;
     animation: moveBackAndForthY 10s ease-in-out infinite;
     z-index: -1;
-    width: 35%;
-    height: auto;
+    height: 60%;
+    width: auto;
 }
 
 .block3 {

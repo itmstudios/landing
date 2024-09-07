@@ -1,5 +1,5 @@
-
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import styles from "./styles.module.css";
 import Project3 from "../../../../public/assets/images/Project3.jpg";
 import Project3_2 from "../../../../public/assets/images/Project3_2.jpg";
@@ -9,8 +9,11 @@ import { Button } from '@/components/ui/button/component';
 import classNames from 'classnames';
 import { inter } from '@/app/fonts';
 import { LinkWithArrow } from '@/components/ui/linkWithArrow/component';
+import Modal from '@/components/modal/component';
+import { ContactUsModal } from '@/components/modal/contactUs/component';
 
 const ProjectPage: React.FC = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
@@ -20,7 +23,7 @@ const ProjectPage: React.FC = () => {
             <Link href={'/'} className={classNames(inter.className, styles.link)}>Сonsept for sale</Link>
             <h1 className={classNames(inter.className, styles.header)}>Design for Coffee shop</h1>
           </div>
-          <Button className={styles.button} text={'I wan’t this one'} />
+          <Button className={styles.button} onClick={() => setModalOpen(true)} text={'I wan’t this one'} />
         </div>
       </div>
 
@@ -30,6 +33,9 @@ const ProjectPage: React.FC = () => {
         <Image src={Project3_2} alt={"Project ecommers"} className={styles.bottom_image}></Image>
       </div>
 
+      <Modal>
+        <ContactUsModal onClose={() => setModalOpen(false)} isOpen={isModalOpen} />
+      </Modal>
     </div>
   );
 };
