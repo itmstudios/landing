@@ -69,3 +69,10 @@
     line-height: 19px;
     color: var(--grey-color-2);
 }
+
+@media screen and (max-width: 500px) {
+
+    .button {
+        margin-top: 16px;
+    }
+}

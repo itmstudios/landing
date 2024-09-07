@@ -56,3 +56,16 @@
     height: auto;
     object-fit: contain;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        align-items: flex-start;
+    }
+
+    .button {
+        margin-top: 16px;
+    }
+}

@@ -1,4 +1,8 @@
 .button {
+    white-space: nowrap; 
+    overflow: hidden;   
+    text-overflow: ellipsis; 
+    display: inline-block; 
     min-height: 40px;
     width: fit-content;
     padding-left: 32px;
@@ -13,7 +17,7 @@
 
 .button:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 500px) {
