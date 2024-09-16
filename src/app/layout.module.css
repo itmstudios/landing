@@ -1,5 +1,7 @@
 .root {
     color: var(--white-color);
+    min-height: 100vh;
+    align-items: start;
     display: grid;
     grid-template-rows: auto 1fr auto;
     position: relative;
