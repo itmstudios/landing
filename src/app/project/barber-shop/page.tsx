@@ -20,7 +20,6 @@ const ProjectPage: React.FC = () => {
   return (
 
     <div className={styles.root}>
-      <div className={styles.wrapper}>
         <Image src={Project1} alt={"project barder-shop"} className={styles.image}></Image>
         <div className={styles.container}>
           <div>
@@ -29,7 +28,6 @@ const ProjectPage: React.FC = () => {
           </div>
           <Button className={styles.button} onClick={() => setModalOpen(true)} text={'I wan’t this one'} />
         </div>
-      </div>
       <LinkWithArrow text={'Next Project'} href='/project/marketplace' />
 
       <div className={classNames(styles.images)}>

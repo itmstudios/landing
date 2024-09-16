@@ -23,7 +23,7 @@ const ProjectPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <LinkWithArrow text={'Next Project'} href='/project/barder-shop' />
+      <LinkWithArrow text={'Next Project'} href='/project/3d' />
     </div>
   );
 };
