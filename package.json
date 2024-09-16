@@ -16,6 +16,7 @@
     "@types/react-syntax-highlighter": "^15.5.10",
     "classnames": "^2.5.1",
     "framer-motion": "^11.5.4",
+    "grammy": "^1.30.0",
     "lil-gui": "^0.19.1",
     "next": "^14.2.11",
     "react": "^18.2.0",
@@ -35,5 +36,3 @@
     "typescript": "^5"
   }
 }
-
-
