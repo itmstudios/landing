@@ -4,9 +4,9 @@ import { AppBar } from "@/components/appBar/component";
 import styles from "./layout.module.css";
 import classNames from "classnames";
 import { ibmPlexMono } from "./fonts";
-import { PopupProvider } from "@/contexts/popupContexts";
 import Popup from "@/components/popup/component";
 import SubmitStatus from "@/components/popup/submitStatus/component";
+import { PopupProvider } from "@/contexts/popupContexts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
