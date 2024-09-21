@@ -3,6 +3,17 @@
     margin: 0 auto;
 }
 
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 .image {
     width: 100%;
     height: auto;
@@ -42,4 +53,11 @@
     font-size: 1rem;
     line-height: 19px;
     color: var(--grey-color-2);
+}
+
+@media screen and (max-width: 500px) {
+
+    .button {
+        margin-top: 16px;
+    }
 }

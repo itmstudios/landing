@@ -11,7 +11,6 @@ export const BottomMenu = () => {
     return (
         <div className={styles.root}>
             <div className={styles.bottom_menu_wrapper}>
-                {/* <span>Eng</span> */}
                 <span className={styles.location}>Location</span>
                 <div className={styles.cities}>
                     <span>Budva</span>

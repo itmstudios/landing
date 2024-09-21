@@ -1,30 +1,13 @@
+import { VideoProduction } from '@/components/pages/videoProduction/page';
 
-import React from 'react';
-import styles from "./styles.module.css";
-import Project4 from "../../../../public/assets/images/Project4.jpg";
-import Image from "next/image";
-import classNames from 'classnames';
-import { inter } from '@/app/fonts';
-import { LinkWithArrow } from '@/components/ui/linkWithArrow/component';
+export const metadata = {
+  title: "ITM Studios Production: Photo, Video, and Media Content for Business",
+  description: "Comprehensive production services by ITM Studios: photography, video shooting, post-production, and media content creation for advertising, brands, and commercial projects.",
+};
 
 const ProjectPage: React.FC = () => {
   return (
-    <div className={styles.root}>
-      <div className={styles.wrapper}>
-        <Image src={Project4} alt={"project real-estate"} className={styles.image}></Image>
-        <div className={styles.container}>
-          <div>
-            <p className={styles.project_name}>Name</p>
-            <h1 className={classNames(inter.className, styles.header)}>Video production</h1>
-          </div>
-          <div>
-            <p className={styles.description}>Production</p>
-            <p className={styles.year}>2024</p>
-          </div>
-        </div>
-      </div>
-      <LinkWithArrow text={'Next Project'} href='/project/3d' />
-    </div>
+    <VideoProduction />
   );
 };
 
