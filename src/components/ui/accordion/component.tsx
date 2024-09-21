@@ -48,7 +48,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, listItems
                             </ul>
                         )}
                         {buttonText && (
-                            <LinkWithArrow text={buttonText} variant='left' href='/project/barder-shop' onClick={onLinkClick}/>
+                            <LinkWithArrow text={buttonText} variant='left' href='/barber-shop' onClick={onLinkClick}/>
                         )}
                     </motion.div>
                 )}
