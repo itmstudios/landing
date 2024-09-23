@@ -1,0 +1,29 @@
+import styles from "./styles.module.css";
+import Project4 from "../../../../public/assets/images/Project4.jpg";
+import Image from "next/image";
+import classNames from 'classnames';
+import { inter } from '@/app/fonts';
+import { LinkWithArrow } from '@/components/ui/linkWithArrow/component';
+
+export const VideoProduction = () => {
+  return (
+    <div className={styles.root}>
+      <div>
+        <h1 className={styles.hidden}>High-quality production for your business</h1>
+        <Image src={Project4} alt={"project real-estate"} className={styles.image}></Image>
+        <div className={styles.container}>
+          <div>
+            <p className={styles.project_name}>Name</p>
+            <h2 className={classNames(inter.className, styles.header)}>Video production</h2>
+          </div>
+          <div>
+            <p className={styles.description}>Production</p>
+            <p className={styles.year}>2024</p>
+          </div>
+        </div>
+      </div>
+      <LinkWithArrow text={'Next Project'} href='/3d' />
+    </div>
+  );
+};
+
