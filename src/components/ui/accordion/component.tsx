@@ -10,10 +10,11 @@ interface AccordionItemProps {
     content: string;
     listItems?: string[];
     buttonText?: string;
+    href?: string;  // Добавляем поле href для ссылки
     onLinkClick?: () => void;
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, listItems, buttonText, onLinkClick = () => { } }) => {
+const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, listItems, buttonText, href, onLinkClick = () => { } }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleAccordion = () => {
@@ -47,8 +48,8 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, listItems
                                 ))}
                             </ul>
                         )}
-                        {buttonText && (
-                            <LinkWithArrow text={buttonText} variant='left' href='/barber-shop' onClick={onLinkClick}/>
+                        {buttonText && href && (
+                            <LinkWithArrow text={buttonText} variant='left' href={href} onClick={onLinkClick} />
                         )}
                     </motion.div>
                 )}
@@ -73,7 +74,8 @@ export const Accordion: React.FC<AccordionProps> = ({ onClose }) => {
                 'Logo',
                 'Print materials'
             ],
-            buttonText: 'Explore our portfolio'
+            buttonText: 'Explore our portfolio',
+            href: '/products/beautybarber'  
         },
         {
             title: 'Marketing and Advertising',
@@ -88,7 +90,8 @@ export const Accordion: React.FC<AccordionProps> = ({ onClose }) => {
                 'Community advertising',
                 'PR and personalized projects'
             ],
-            buttonText: 'Explore our portfolio'
+            buttonText: 'Explore our portfolio',
+            href: '/products/beautybarber'  
         },
         {
             title: 'Business Development',
@@ -102,7 +105,8 @@ export const Accordion: React.FC<AccordionProps> = ({ onClose }) => {
                 'Bots and neural networks',
                 'Support'
             ],
-            buttonText: 'Explore our portfolio'
+            buttonText: 'Explore our portfolio',
+            href: '/products/beautybarber'  
         },
         {
             title: 'Production',
@@ -118,7 +122,8 @@ export const Accordion: React.FC<AccordionProps> = ({ onClose }) => {
                 '3D model creation',
                 '360 reviews'
             ],
-            buttonText: 'Explore our portfolio'
+            buttonText: 'Explore our portfolio',
+            href: '/production/360'  
         }
     ];
     return (

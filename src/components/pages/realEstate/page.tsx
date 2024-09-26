@@ -13,9 +13,9 @@ export const RealEstate = () => {
       <div>
       <h1 className={styles.hidden}>Showcasing Real Estate with Stunning Visuals</h1>
         <div className={styles.images_container}>
-          <Image src={Project5_1} alt={"project video-production "} className={styles.image1}></Image>
-          <Image src={Project5_2} alt={"project video-production "} className={styles.image2}></Image>
-          <Image src={Project5_3} alt={"project video-production "} className={styles.image3}></Image>
+          <Image src={Project5_1} alt={"project Real Estate"} className={styles.image1}></Image>
+          <Image src={Project5_2} alt={"project Real Estate"} className={styles.image2}></Image>
+          <Image src={Project5_3} alt={"project Real Estate"} className={styles.image3}></Image>
         </div>
         <div className={styles.container}>
           <div>
@@ -28,7 +28,7 @@ export const RealEstate = () => {
           </div>
         </div>
       </div>
-      <LinkWithArrow text={'Next Project'} href='/video-production'/>
+      <LinkWithArrow text={'Next Project'} href='/production/360'/>
     </div>
   );
 };

@@ -9,14 +9,14 @@ export const metadata = {
   description: "Professional 3D modeling and visualization for architecture, products, and interiors. Realistic solutions to showcase your ideas.",
 };
 
-export default function ThreeD() {
+export default function Page() {
   return (
     <div className={styles.root}>
        <h1 className={styles.hidden}>Bringing your ideas to life with 3D models</h1>
       <div className={styles.luma_scene}>      
         <LumaScene />
       </div>
-      <LinkWithArrow text={'Next Project'} href='/barber-shop' />
+      <LinkWithArrow text={'Next Project'} href='/production/3d' />
     </div>
   );
 }

@@ -5,12 +5,12 @@ import classNames from 'classnames';
 import { inter } from '@/app/fonts';
 import { LinkWithArrow } from '@/components/ui/linkWithArrow/component';
 
-export const VideoProduction = () => {
+export const ComingSoon = () => {
   return (
     <div className={styles.root}>
       <div>
         <h1 className={styles.hidden}>High-quality production for your business</h1>
-        <Image src={Project4} alt={"project real-estate"} className={styles.image}></Image>
+        <Image src={Project4} alt={"ComingSoon"} className={styles.image}></Image>
         <div className={styles.container}>
           <div>
             <p className={styles.project_name}>Name</p>
@@ -22,7 +22,7 @@ export const VideoProduction = () => {
           </div>
         </div>
       </div>
-      <LinkWithArrow text={'Next Project'} href='/3d' />
+      <LinkWithArrow text={'Next Project'} href='/products/beautybarber' />
     </div>
   );
 };

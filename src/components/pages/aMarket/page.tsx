@@ -23,7 +23,7 @@ export const AMarket = () => {
           </div>
         </div>
       </div>
-      <LinkWithArrow text={'Next Project'} href='/ecommers' />
+      <LinkWithArrow text={'Next Project'} href='/products/evensy' />
     </div>
   );
 };

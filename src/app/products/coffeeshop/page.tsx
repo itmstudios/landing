@@ -1,4 +1,4 @@
-import { Ecommers } from '@/components/pages/ecommers/page';
+import { Coffeeshop } from "@/components/pages/coffeeshop/page";
 
 export const metadata = {
   title: "Professional Design by ITM Studios: Web Design, UX/UI, Graphics",
@@ -7,7 +7,7 @@ export const metadata = {
 
 const ProjectPage: React.FC = () => {
   return (
-    <Ecommers />
+    <Coffeeshop />
   );
 };
 
