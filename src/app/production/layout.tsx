@@ -19,7 +19,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Link>
         </div>
         {children}
-        <Menu />
       </div>
       <Footer />
     </>

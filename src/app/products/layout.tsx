@@ -18,10 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Logo className={styles.logo} />
           </Link>
         </div>
-
         {children}
-
-        <Menu />
       </div>
       <Footer />
     </>
