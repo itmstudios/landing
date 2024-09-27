@@ -1,4 +1,4 @@
-import { VideoProduction } from '@/components/pages/videoProduction/page';
+import { Evensy } from '@/components/pages/evensy/page';
 
 export const metadata = {
   title: "ITM Studios Production: Photo, Video, and Media Content for Business",
@@ -7,7 +7,7 @@ export const metadata = {
 
 const ProjectPage: React.FC = () => {
   return (
-    <VideoProduction />
+    <Evensy />
   );
 };
 

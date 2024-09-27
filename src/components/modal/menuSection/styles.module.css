@@ -1,0 +1,56 @@
+.root:first-child {
+    margin-bottom: 16px;
+  }
+
+  .root:last-child {
+    margin-top: 12px;
+  }
+  
+  .menuHeader {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .menuItem {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    margin-left: 8px;
+    position: relative;
+    display: block;
+  }
+
+  .menuItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  .menuItem a {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .menuItem a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--white-color);
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .menuItem a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .menuItem a:hover {
+    cursor: pointer;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  

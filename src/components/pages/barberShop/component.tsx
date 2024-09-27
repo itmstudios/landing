@@ -27,7 +27,7 @@ export const BarberShop = () => {
           </div>
           <Button className={styles.button} onClick={() => setModalOpen(true)} text={'I wan’t this one'} />
         </div>
-      <LinkWithArrow text={'Next Project'} href='/a-market' />
+      <LinkWithArrow text={'Next Project'} href='/products/coffeeshop' />
 
       <div className={classNames(styles.images)}>
         <Image src={Layout_beauty} alt={"Layout beauty"} className={styles.layout_image}></Image>
