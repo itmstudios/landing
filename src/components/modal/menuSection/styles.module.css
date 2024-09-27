@@ -1,6 +1,9 @@
-.root {
-    margin-top: 12px;
+.root:first-child {
     margin-bottom: 16px;
+  }
+
+  .root:last-child {
+    margin-top: 12px;
   }
   
   .menuHeader {
