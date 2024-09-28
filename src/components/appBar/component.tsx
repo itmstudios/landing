@@ -8,9 +8,9 @@ import { Menu } from "../modal/menu/component";
 export const AppBar: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [isContactUsOpen, setIsContactUsOpen] = useState(false);
-  const parentRef = useRef<HTMLDivElement>(null); 
+  const parentRef = useRef<HTMLDivElement>(null);
   const toggleContactUs = (event: React.MouseEvent) => {
-    event.stopPropagation(); 
+    event.stopPropagation();
     setIsContactUsOpen(prev => !prev);
     if (isModalOpen) {
       setModalOpen(false);
@@ -25,7 +25,7 @@ export const AppBar: React.FC = () => {
   };
 
   return (
-    <header className={styles.root}> 
+    <header className={styles.root}>
       <nav className={styles.navBar}>
         <ul className={styles.menu}>
           <li>
@@ -46,8 +46,8 @@ export const AppBar: React.FC = () => {
         <SideBar isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
         <Menu
           isOpen={isContactUsOpen}
-          onClose={() => setIsContactUsOpen(false)} 
-          parentRef={parentRef} 
+          onClose={() => setIsContactUsOpen(false)}
+          parentRef={parentRef}
         />
       </Modal>
     </header>
