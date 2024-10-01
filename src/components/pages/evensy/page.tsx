@@ -14,7 +14,7 @@ export const Evensy = () => {
         <div className={styles.container}>
           <div>
             <p className={styles.project_name}>Name</p>
-            <h2 className={classNames(inter.className, styles.header)}>Video production</h2>
+            <h2 className={classNames(inter.className, styles.header)}>Idea, developing, </h2>
           </div>
           <div>
             <p className={styles.description}>Production</p>

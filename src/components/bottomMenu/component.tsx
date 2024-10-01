@@ -14,7 +14,6 @@ export const BottomMenu = () => {
                 <span className={styles.location}>Location</span>
                 <div className={styles.cities}>
                     <span>Budva</span>
-                    <span>Moscow</span>
                 </div>
             </div>
             <Button onClick={() => setModalOpen(true)} text="Contact Us" />

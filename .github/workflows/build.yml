@@ -1,0 +1,36 @@
+name: Publish to Registry Develop
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@v5
+      with:
+        name: 63phc/more
+        username: ${{ secrets.DOCKER_HUB_USER }}
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+        tags: ${{ steps.meta.outputs.tags }}
+        dockerfile: .docker/Dockerfile
+
+
+#  deploy:
+#    needs: build
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Executing remote ssh commands docker down, pull and up using ssh key
+#        uses: appleboy/ssh-action@v1.0.3
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ${{ secrets.HOST_USERNAME }}
+#          password: ${{ secrets.HOST_PASSWORD }}
+##          key: ${{ secrets.KEY }}
+#          script: |
+#            cd ${{ secrets.PATH_BACKEND }}
+#            docker compose down && docker compose pull && docker compose up -d

@@ -89,6 +89,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, parentRef }) => {
             items={[
               { label: "360", href: "/production/360" },
               { label: "3D", href: "/production/3d" },
+              { label: "Real Estate", href: "/production/real-estate" },
             ]}
             onItemClick={onClose}
           />

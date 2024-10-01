@@ -1,4 +1,5 @@
 import { ComingSoon } from '@/components/pages/comingsoon/page';
+import YouTubeEmbed from '@/components/youtubeEmbed/component';
 
 export const metadata = {
   title: "ITM Studios Production: Photo, Video, and Media Content for Business",
@@ -7,7 +8,11 @@ export const metadata = {
 
 const Page: React.FC = () => {
   return (
-    <ComingSoon />
+    <div>
+      <div style={{ marginTop: '20px' }}>
+        <YouTubeEmbed videoId="GfSA7-GiqJc" />
+      </div>
+    </div>
   );
 };
 

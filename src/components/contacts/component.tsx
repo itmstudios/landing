@@ -14,9 +14,10 @@ export const Contacts = () => {
             </div>
             <p className={styles.subheading}>Social media</p>
             <div className={styles.link_container}>
-                <Link href="/" className={classNames(inter.className, styles.contact_link)}>LinkedIn</Link>
-                <Link href="/" className={classNames(inter.className, styles.contact_link)}>Telegram</Link>
-                <Link href="/" className={classNames(inter.className, styles.contact_link)}>GitHub</Link>
+                <Link href="https://www.linkedin.com/company/itmstudios/" className={classNames(inter.className, styles.contact_link)}>LinkedIn</Link>
+                <Link href="https://t.me/itmstudios/" className={classNames(inter.className, styles.contact_link)}>Telegram</Link>
+                <Link href="https://github.com/itmstudios/" className={classNames(inter.className, styles.contact_link)}>GitHub</Link>
+                <Link href="https://www.youtube.com/@itm_studios" className={classNames(inter.className, styles.contact_link)}>YouTube</Link>
             </div>
             <p className={styles.subheading}>Our office</p>
             <div className={styles.link_container}>
