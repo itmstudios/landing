@@ -13,7 +13,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@v5
       with:
-        name: 63phc/more
+        name: 63phc/land
         username: ${{ secrets.DOCKER_HUB_USER }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         tags: ${{ steps.meta.outputs.tags }}

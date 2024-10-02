@@ -1,4 +1,3 @@
-import { ComingSoon } from '@/components/pages/comingsoon/page';
 import YouTubeEmbed from '@/components/youtubeEmbed/component';
 
 export const metadata = {

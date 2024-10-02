@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from 'react';
 import { WebGLRenderer, PerspectiveCamera, Scene } from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { LumaSplatsThree } from '@lumaai/luma-web';
 
 const LumaScene = () => {

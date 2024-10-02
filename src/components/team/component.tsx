@@ -14,24 +14,24 @@ export const Team = () => {
                 <div className={styles.photo_container}>
                     <Image src={Photo2} alt={'photo'} className={styles.person_photo}></Image>
                 </div>
-                <p className={styles.person_role}>CTO</p>
-                <p className={styles.person_role}>Pavel Burns</p>
+                <p className={styles.person_role}>Software Development</p>
+                <p className={styles.person_role}>PAVEL BURNS</p>
             </div>
 
             <div className={styles.person_cart}>
                 <div className={styles.photo_container}>
                     <Image src={Photo3} alt={'photo'} className={styles.person_photo}></Image>
                 </div>
-                <p className={styles.person_role}>ART DIRECTOR</p>
-                <p className={styles.person_role}>Giuzel Saberova</p>
+                <p className={styles.person_role}>Creative & Design</p>
+                <p className={styles.person_role}>GIUZEL SABEROVA</p>
             </div>
 
             <div className={styles.person_cart}>
                 <div className={styles.photo_container}>
                     <Image src={Photo4} alt={'photo'} className={styles.person_photo}></Image>
                 </div>
-                <p className={styles.person_role}>CEO</p>
-                <p className={styles.person_role}>Dmitriy Korolev</p>
+                <p className={styles.person_role}>Management & Analytics</p>
+                <p className={styles.person_role}>DMITRIY KOROLEV</p>
             </div>
 
             <div className={styles.person_cart}>
@@ -39,7 +39,7 @@ export const Team = () => {
                     <Image src={Photo5} alt={'photo'} className={styles.person_photo}></Image>
                 </div>
                 <p className={styles.person_role}>Marketing & Production</p>
-                <p className={styles.person_role}>Shamil</p>
+                <p className={styles.person_role}>SHAMIL</p>
             </div>
         </div>
     )

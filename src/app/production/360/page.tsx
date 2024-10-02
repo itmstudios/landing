@@ -1,4 +1,5 @@
 import { ComingSoon } from '@/components/pages/comingsoon/page';
+import Tour360 from '@/components/tour360/component';
 
 export const metadata = {
   title: "ITM Studios Production: Photo, Video, and Media Content for Business",
@@ -7,7 +8,9 @@ export const metadata = {
 
 const Page: React.FC = () => {
   return (
-    <ComingSoon />
+    <>
+      <Tour360 /> {/* Здесь добавлен новый компонент с 3D туром */}
+    </>
   );
 };
 
