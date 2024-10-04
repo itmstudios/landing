@@ -17,7 +17,7 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USER }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         tags: ${{ steps.meta.outputs.tags }}
-        dockerfile: .docker/Dockerfile
+        dockerfile: Dockerfile
 
 
 #  deploy:

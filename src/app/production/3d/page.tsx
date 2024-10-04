@@ -16,7 +16,8 @@ export default function Page() {
       <div className={styles.luma_scene}>
         <LumaScene />
       </div>
-      <LinkWithArrow text={'Next Project'} href='/production/3d' />
+
+      <LinkWithArrow text={'Next Project'} href='/production/real-estate/' />
     </div>
   );
 }

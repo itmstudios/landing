@@ -13,11 +13,11 @@ export const Evensy = () => {
         <Image src={Project4} alt={"evensy"} className={styles.image}></Image>
         <div className={styles.container}>
           <div>
-            <p className={styles.project_name}>Name</p>
-            <h2 className={classNames(inter.className, styles.header)}>Idea, developing, </h2>
+            <p className={styles.project_name}>Evensy</p>
+            <h2 className={classNames(inter.className, styles.header)}>Events system with tickets</h2>
           </div>
           <div>
-            <p className={styles.description}>Production</p>
+            <p className={styles.description}>Idea, Design, Developing and Marketing</p>
             <p className={styles.year}>2024</p>
           </div>
         </div>

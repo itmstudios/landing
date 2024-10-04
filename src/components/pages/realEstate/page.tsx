@@ -6,6 +6,7 @@ import Image from "next/image";
 import classNames from 'classnames';
 import { inter } from '@/app/fonts';
 import { LinkWithArrow } from '@/components/ui/linkWithArrow/component';
+import Link from 'next/link';
 
 export const RealEstate = () => {
   return (
@@ -19,11 +20,11 @@ export const RealEstate = () => {
         </div>
         <div className={styles.container}>
           <div>
-            <p className={styles.project_name}>Name</p>
+            <Link href={"https://morecapital.me/"} target="_blank" rel="noopener noreferrer" className={styles.project_name}>More Capital</Link>
             <h1 className={classNames(inter.className, styles.header)}>Real Estate</h1>
           </div>
           <div>
-            <p className={styles.description}>Production</p>
+            <p className={styles.description}>Design and Developing</p>
             <p className={styles.year}>2024</p>
           </div>
         </div>
