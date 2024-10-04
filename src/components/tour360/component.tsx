@@ -64,7 +64,7 @@ const Tour360: React.FC = () => {
       const textureLoader = new THREE.TextureLoader();
 
       // Начальная текстура
-      const initialTexture = textureLoader.load('/assets/tour360/1.JPG', () => {
+      const initialTexture = textureLoader.load('/assets/tour360/3.JPG', () => {
         renderer.render(scene, camera);
       });
 
@@ -113,7 +113,7 @@ const Tour360: React.FC = () => {
             // Точка была нажата, загружаем новый файл с анимацией перехода
             isTransitioningRef.current = true;
 
-            const newTexture = textureLoader.load('/assets/tour360/2.JPG', () => {
+            const newTexture = textureLoader.load('/assets/tour360/1.JPG', () => {
               // Создаем новый материал с новой текстурой
               const newMaterial = new THREE.MeshBasicMaterial({
                 map: newTexture,

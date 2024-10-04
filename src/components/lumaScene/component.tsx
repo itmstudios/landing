@@ -4,7 +4,11 @@ import { WebGLRenderer, PerspectiveCamera, Scene } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { LumaSplatsThree } from '@lumaai/luma-web';
 
-const LumaScene = () => {
+interface LumaSceneProps {
+  source: string;
+}
+
+const LumaScene = ({ source }: LumaSceneProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -30,12 +34,12 @@ const LumaScene = () => {
 
     const loadSplat = async () => {
       const splat = new LumaSplatsThree({
-        source: 'https://lumalabs.ai/capture/E74048DC-B167-416F-BEED-A358F725CD20',
+        source,
       });
       scene.add(splat);
     };
 
-    loadSplat().catch(error => {
+    loadSplat().catch((error) => {
       console.error("Error loading LumaSplatsThree model:", error);
     });
 
@@ -66,7 +70,7 @@ const LumaScene = () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         resizeRendererToDisplaySize();
-        renderer.render(scene, camera); 
+        renderer.render(scene, camera);
       });
     };
 
@@ -78,7 +82,7 @@ const LumaScene = () => {
       controls.dispose();
       cancelAnimationFrame(frameId);
     };
-  }, []);
+  }, [source]);
 
   return <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />;
 };
