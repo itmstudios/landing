@@ -1,9 +1,7 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-// Импорт OrbitControls
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-// Импорт gsap для анимаций
 import gsap from 'gsap';
 
 const Tour360: React.FC = () => {
@@ -14,17 +12,18 @@ const Tour360: React.FC = () => {
   const controlsRef = useRef<OrbitControls>();
   const animationIdRef = useRef<number>();
   const sphereRef = useRef<THREE.Mesh>();
-  const isTransitioningRef = useRef<boolean>(false); // Флаг для предотвращения повторных кликов во время перехода
+  const isTransitioningRef = useRef<boolean>(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && containerRef.current) {
       const container = containerRef.current;
 
-      // Устанавливаем размеры контейнера
-      const WIDTH = 800;
-      const HEIGHT = 600;
-      container.style.width = `${WIDTH}px`;
-      container.style.height = `${HEIGHT}px`;
+      // Устанавливаем размеры контейнера динамически в зависимости от устройства
+      const WIDTH = container.clientWidth;
+      const HEIGHT = container.clientHeight;
+
+      container.style.width = '100%';
+      container.style.height = '100vh';
 
       // Сцена
       const scene = new THREE.Scene();
@@ -89,7 +88,7 @@ const Tour360: React.FC = () => {
       const pointMesh = new THREE.Mesh(pointGeometry, pointMaterial);
 
       // Установка позиции точки
-      pointMesh.position.set(100, 0, -100); // Настройте позицию по необходимости
+      pointMesh.position.set(100, 0, -100);
       scene.add(pointMesh);
 
       // Raycaster и вектор мыши для обнаружения кликов
@@ -99,7 +98,7 @@ const Tour360: React.FC = () => {
       // Функция обработки кликов
       const onClick = (event: MouseEvent) => {
         event.preventDefault();
-        if (isTransitioningRef.current) return; // Если уже идет переход, игнорируем клики
+        if (isTransitioningRef.current) return;
 
         if (renderer.domElement && cameraRef.current) {
           const rect = renderer.domElement.getBoundingClientRect();
@@ -110,32 +109,26 @@ const Tour360: React.FC = () => {
           const intersects = raycaster.intersectObjects([pointMesh]);
 
           if (intersects.length > 0) {
-            // Точка была нажата, загружаем новый файл с анимацией перехода
             isTransitioningRef.current = true;
 
             const newTexture = textureLoader.load('/assets/tour360/1.JPG', () => {
-              // Создаем новый материал с новой текстурой
               const newMaterial = new THREE.MeshBasicMaterial({
                 map: newTexture,
                 transparent: true,
                 opacity: 0,
               });
 
-              // Создаем новую сферу с новым материалом
               const newSphere = new THREE.Mesh(geometry, newMaterial);
               scene.add(newSphere);
 
-              // Анимируем переход прозрачности
               gsap.to(newMaterial, {
                 opacity: 1,
                 duration: 1,
                 onComplete: () => {
-                  // Удаляем старую сферу после перехода
                   scene.remove(sphere);
                   sphere.material.dispose();
                   sphere.geometry.dispose();
 
-                  // Обновляем ссылку на текущую сферу
                   sphereRef.current = newSphere;
                   isTransitioningRef.current = false;
                 },
@@ -155,8 +148,8 @@ const Tour360: React.FC = () => {
       // Обработка изменения размера окна
       const handleResize = () => {
         if (cameraRef.current && rendererRef.current) {
-          const width = WIDTH;
-          const height = HEIGHT;
+          const width = container.clientWidth;
+          const height = container.clientHeight;
 
           cameraRef.current.aspect = width / height;
           cameraRef.current.updateProjectionMatrix();
@@ -216,7 +209,9 @@ const Tour360: React.FC = () => {
     <div
       ref={containerRef}
       style={{
-        margin: '0 auto', // Центрирование контейнера
+        width: '100%',
+        height: '100vh',
+        margin: '0 auto',
       }}
     />
   );
