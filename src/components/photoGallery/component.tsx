@@ -13,7 +13,7 @@ const PhotoGallery: React.FC = () => {
         { photo: Photo2, role: "Software Development", name: "PAVEL BURNS" },
         { photo: Photo3, role: "Creative & Design", name: "GIUZEL SABEROVA" },
         { photo: Photo4, role: "Management & Analytics", name: "DMITRIY KOROLEV" },
-        { photo: Photo5, role: "Marketing & Production", name: "SHAMIL" },
+        { photo: Photo5, role: "Marketing & Production", name: "SHAMIL" }
     ];
     return (
         <div className={styles.root}>
