@@ -1,0 +1,22 @@
+.root {
+    overflow-x: auto;      
+    display: flex;          
+    flex-direction: row;    
+    min-height: fit-content; 
+    gap: 16px;              
+    margin-bottom: 64px;     
+    height: 100px;           
+}
+
+.root::-webkit-scrollbar {
+    display: none; 
+}
+
+.root {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.photo_container {
+    width: 164px;
+}

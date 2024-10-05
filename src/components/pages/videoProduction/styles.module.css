@@ -33,6 +33,7 @@
 .project_name {
     font-size: 1.5rem;
     line-height: 31px;
+    text-decoration: underline;
     margin-bottom: 8px;
 }
 
@@ -52,30 +53,4 @@
     font-size: 1rem;
     line-height: 19px;
     color: var(--grey-color-2);
-}
-
-.images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 26px;
-    margin-bottom: 126px;
-}
-
-.layout_image {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-@media screen and (max-width: 500px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 16px;
-        align-items: flex-start;
-    }
-
-    .button {
-        margin-top: 16px;
-    }
 }

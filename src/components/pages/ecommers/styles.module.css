@@ -23,48 +23,32 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
     align-items: center;
     margin-bottom: 44px;
+    justify-content: space-between;
 }
 
-.project_name {
+.link {
     font-size: 1.5rem;
     line-height: 31px;
-    margin-bottom: 8px;
+    text-decoration: underline;
 }
 
 .header {
+    margin-top: 8px;
     font-size: 1rem;
     color: var(--grey-color-2);
     line-height: 19px;
 }
 
-.description {
-    font-size: 1.25rem;
-    line-height: 26px;
-    margin-bottom: 8px;
-}
-
-.year {
-    font-size: 1rem;
-    line-height: 19px;
-    color: var(--grey-color-2);
-}
-
-.images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 26px;
-    margin-bottom: 126px;
-}
-
-.layout_image {
+.bottom_image {
     width: 100%;
     height: auto;
     object-fit: contain;
+    margin-bottom: 126px;
 }
 
 @media screen and (max-width: 500px) {

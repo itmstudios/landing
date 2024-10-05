@@ -31,6 +31,12 @@
     justify-content: space-between;
 }
 
+.project_name {
+    font-size: 1.5rem;
+    line-height: 31px;
+    margin-bottom: 8px;
+}
+
 .link {
     font-size: 1.5rem;
     line-height: 31px;

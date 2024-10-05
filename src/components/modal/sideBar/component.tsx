@@ -11,9 +11,8 @@ import { Button } from '@/components/ui/button/component';
 import Modal from '../component';
 import { ContactUsModal } from '../contactUs/component';
 import { Accordion } from '@/components/ui/accordion/component';
-import { Team } from '@/components/team/component';
 import { Contacts } from '@/components/contacts/component';
-import { Footer } from '@/components/footer/component';
+import PhotoGallery from '@/components/photoGallery/component';
 
 interface SideBarProps {
     isOpen: boolean;
@@ -59,12 +58,12 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                         <p className={classNames(inter.className, styles.description)}>
                             We combine creative marketing with cutting-edge development technologies. We launch unique products, develop designs, and create marketing strategies that help grow your brand and attract new customers. No matter the complexity of the task, whether it’s creating a website or app, photo/video content, motion or graphic design, we are ready to provide you with a full range of services to achieve your goals.
                         </p>
-                            <Image
-                                src={Photo}
-                                alt="Photo"
-                                className={styles.image}
-                            />
-                        <Button className={styles.contact_us_button} onClick={() => setModalOpen(true)} text="Contact Us" />
+                        <Image
+                            src={Photo}
+                            alt="Photo"
+                            className={styles.image}
+                        /> 
+
                         <Modal>
                             <ContactUsModal onClose={() => setModalOpen(false)} isOpen={isModalOpen} />
                         </Modal>
@@ -73,12 +72,13 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                         <Accordion onClose={handleCloseModal} />
 
                         <h2 className={classNames(ibmPlexMono.className, styles.heading)}>Team</h2>
-                        <Team />
+                        <PhotoGallery />
 
                         <h2 className={classNames(ibmPlexMono.className, styles.heading)}>Contact</h2>
-                        <Contacts />
+                        <Contacts /> 
 
-                        <Footer />
+                        <Button className={styles.contact_us_button} onClick={() => setModalOpen(true)} text="Contact Us" />
+
                     </motion.div>
                 </motion.div>
             )}

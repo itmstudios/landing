@@ -1,8 +1,6 @@
 .root {
-    width: 100%;
     max-width: 856px;
-    aspect-ratio: 16 / 9;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .hidden {
@@ -16,10 +14,6 @@
     border: 0;
 }
 
-
-@media screen and (max-width: 700px) {
-    .root {
-        margin-top: 60px;
-    }
+.luma_scene {
+    margin-bottom: 44px;
 }
-

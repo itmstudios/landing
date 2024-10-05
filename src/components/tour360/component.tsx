@@ -17,8 +17,6 @@ const Tour360: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && containerRef.current) {
       const container = containerRef.current;
-
-      // Устанавливаем размеры контейнера динамически в зависимости от устройства
       const WIDTH = container.clientWidth;
       const HEIGHT = container.clientHeight;
 

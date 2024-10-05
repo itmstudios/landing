@@ -14,7 +14,6 @@ export default function Page() {
     <div className={styles.root}>
       <h1 className={styles.hidden}>Bringing your ideas to life with 3D models</h1>
 
-
       <div className={styles.luma_scene}>
           <LumaScene source="https://lumalabs.ai/capture/E74048DC-B167-416F-BEED-A358F725CD20" />
       </div>
