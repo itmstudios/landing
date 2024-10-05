@@ -17,7 +17,6 @@ const Tour360: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && containerRef.current) {
       const container = containerRef.current;
-
       const WIDTH = container.clientWidth;
       const HEIGHT = container.clientHeight;
 
