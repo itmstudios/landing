@@ -15,13 +15,13 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const { name, email, phone, company, industry, message }:
       { name: string; email: string; phone: string; company: string; industry: string; message: string } = await request.json();
 
-    if (!name || !email || !phone || !message) {
+    if (!name || !email || !message) {
       return NextResponse.json({ success: false, error: 'Missing data' }, { status: 400 });
     }
 
     const telegramMessage = `
 📧 **Email**: ${email}
-📞 **Phone**: ${phone}
+📞 **Phone**: ${phone || ''}
 👤 **Name**: ${name}
 🏢 **Company**: ${company || ''}
 🏭 **Industry**: ${industry || ''}
