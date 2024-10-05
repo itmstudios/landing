@@ -14,7 +14,6 @@ export default function ThreeD() {
     <div className={styles.root}>
        <h1 className={styles.hidden}>Bringing your ideas to life with 3D models</h1>
       <div className={styles.luma_scene}>      
-        <LumaScene />
       </div>
       <LinkWithArrow text={'Next Project'} href='/barber-shop' />
     </div>
