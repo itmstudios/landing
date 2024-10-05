@@ -15,18 +15,18 @@ import { ContactUsModal } from '@/components/modal/contactUs/component';
 
 export const BarberShop = () => {
   const [isModalOpen, setModalOpen] = useState(false);
-  
+
   return (
     <div className={styles.root}>
-       <h1 className={styles.hidden}>Creating unique designs that work for your brand</h1>
-        <Image src={Project1} alt={"project barder-shop"} className={styles.image}></Image>
-        <div className={styles.container}>
-          <div>
-            <Link href={'/'} className={classNames(inter.className, styles.link)}>Сonsept for sale</Link>
-            <h1 className={classNames(inter.className, styles.header)}>Design for Beauty salon and Barber shop</h1>
-          </div>
-          <Button className={styles.button} onClick={() => setModalOpen(true)} text={'I wan’t this one'} />
+      <h1 className={styles.hidden}>Creating unique designs that work for your brand</h1>
+      <Image src={Project1} alt={"project barder-shop"} className={styles.image}></Image>
+      <div className={styles.container}>
+        <div>
+          <p className={styles.project_name}>Сonsept for sale</p>
+          <h1 className={classNames(inter.className, styles.header)}>Design for Beauty salon and Barber shop</h1>
         </div>
+        <Button className={styles.button} onClick={() => setModalOpen(true)} text={'I wan’t this one'} />
+      </div>
       <LinkWithArrow text={'Next Project'} href='/products/coffeeshop' />
 
       <div className={classNames(styles.images)}>

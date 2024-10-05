@@ -3,7 +3,6 @@ import styles from "./layout.module.css";
 import { Footer } from "@/components/footer/component";
 import Link from "next/link";
 import { Logo } from "@/components/icons/components";
-// import Menu from "@/components/menu/component";
 
 interface LayoutProps {
   children: ReactNode;

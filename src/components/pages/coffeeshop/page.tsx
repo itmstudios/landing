@@ -21,7 +21,7 @@ export const Coffeeshop: React.FC = () => {
         <Image src={Project3} alt={"Coffeeshop"} className={styles.image}></Image>
         <div className={styles.container}>
           <div>
-            <Link href={'/'} className={classNames(inter.className, styles.link)}>Сonsept for sale</Link>
+            <p className={styles.project_name}>Сonsept for sale</p>
             <h2 className={classNames(inter.className, styles.header)}>Design for Coffee shop</h2>
           </div>
           <Button className={styles.button} onClick={() => setModalOpen(true)} text={'I wan’t this one'} />

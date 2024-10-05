@@ -12,8 +12,6 @@
 .accordionButton {
     background-color: var(--main-bg-color-2);
     color: var(--white-color);
-    padding: 0;
-    height: 26px;
     max-width: 420px;
     width: 100%;
     text-align: left;
@@ -94,6 +92,27 @@
 
 .link:hover .arrow {
     transform: translateX(5px);
+}
+
+@media screen and (max-width: 700px) {
+    .form {
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accordionButton {
+        font-size: 1.25rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        padding: 5px; 
+    }
+
+    .accordionButton::after,
+    .accordionButton::before {
+        right: 10px; 
+    }
+
 }
 
 

@@ -10,7 +10,7 @@ interface AccordionItemProps {
     content: string;
     listItems?: string[];
     buttonText?: string;
-    href?: string;  // Добавляем поле href для ссылки
+    href?: string;  
     onLinkClick?: () => void;
 }
 

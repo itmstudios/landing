@@ -1,21 +1,13 @@
-import { ComingSoon } from '@/components/pages/comingsoon/page';
+
+import PanoramaViewer from '@/components/panoramaViewer/component';
+import styles from './styles.module.css';
 import { LinkWithArrow } from '@/components/ui/linkWithArrow/component';
 
-import Tour360 from '@/components/tour360/component';
-
-export const metadata = {
-  title: "ITM Studios Production: Photo, Video, and Media Content for Business in 360 tour",
-  description: "Comprehensive production services by ITM Studios: photography, video shooting, post-production, 360 tours and media content creation for advertising, brands, and commercial projects.",
-};
-
-const Page: React.FC = () => {
+export default function Page() {
   return (
-    <>
-      <Tour360 />
+    <div className={styles.root}>
+      <PanoramaViewer />
       <LinkWithArrow text={'Next Project'} href='/production/3d/' />
-     </>
-
+    </div>
   );
-};
-
-export default Page;
+}
