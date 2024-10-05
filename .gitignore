@@ -28,12 +28,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
-.env
-# Ignoring all environment variable files
-*.env
-
 # vercel
 .vercel
 
